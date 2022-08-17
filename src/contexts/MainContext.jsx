@@ -3,9 +3,9 @@ import { useState, createContext, useContext } from 'react';
 const MainContext = createContext();
 
 export const MainProvider = ({ children }) => {
-  const [test, setTest] = useState();
+  const [score, setScore] = useState(0);
 
-  const values = { test, setTest };
+  const values = { score, setScore };
 
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 };
