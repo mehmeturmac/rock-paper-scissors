@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+import { BrowserRouter } from 'react-router-dom';
+
 // Contexts
-import { MainProvider } from './contexts/MainContext';
+import { GameProvider } from './context/gameContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <MainProvider>
-    <App />
-  </MainProvider>
+  <BrowserRouter>
+    <GameProvider>
+      <App />
+    </GameProvider>
+  </BrowserRouter>
 );
