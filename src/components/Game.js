@@ -14,21 +14,21 @@ export const Game = () => {
             handleClick('paper');
             navigate('/game');
           }}
-          className="translate-x-6 hover:scale-110 transition-all duration-200 bg-white bg-no-repeat bg-center w-[160px] h-[160px] rounded-[50%] border-[18px] shadow-paper border-paper bg-50 bg-paper"
+          className="translate-x-6 sm:translate-x-2 sm:translate-y-1 hover:scale-110 transition-all duration-200 bg-white bg-no-repeat bg-center w-[160px] h-[160px] sm:w-[120px] sm:h-[120px] rounded-[50%] border-[18px] shadow-paper border-paper bg-50 bg-paper"
         ></div>
         <div
           onClick={() => {
             handleClick('scissors');
             navigate('/game');
           }}
-          className="translate-x-32 hover:scale-110 transition-all duration-200 bg-white bg-no-repeat bg-center w-[160px] h-[160px] rounded-[50%] border-[18px] shadow-scissors border-scissors bg-50 bg-scissors"
+          className="translate-x-32 hover:scale-110 transition-all duration-200 bg-white bg-no-repeat bg-center w-[160px] h-[160px] sm:w-[120px] sm:h-[120px] rounded-[50%] border-[18px] shadow-scissors border-scissors bg-50 bg-scissors"
         ></div>
         <div
           onClick={() => {
             handleClick('rock');
             navigate('/game');
           }}
-          className="-translate-x-40 translate-y-52 hover:scale-110 transition-all duration-200 bg-white bg-no-repeat bg-center w-[160px] h-[160px] rounded-[50%] border-[18px] shadow-rock border-rock bg-50 bg-rock"
+          className="-translate-x-40 translate-y-52 sm:-translate-x-32 sm:translate-y-60 hover:scale-110 transition-all duration-200 bg-white bg-no-repeat bg-center w-[160px] h-[160px] sm:w-[120px] sm:h-[120px] rounded-[50%] border-[18px] shadow-rock border-rock bg-50 bg-rock"
         ></div>
       </div>
     </div>
