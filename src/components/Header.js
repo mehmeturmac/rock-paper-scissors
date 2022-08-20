@@ -3,13 +3,12 @@ import { useGame } from '../context/gameContext';
 
 export const Header = () => {
   const { score } = useGame();
-  const [data, setData] = useState(score.player - score.computer);
+  const [data, setData] = useState(score);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setData(score.player - score.computer);
+      setData(score);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [score]);
 

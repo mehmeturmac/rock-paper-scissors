@@ -28,10 +28,7 @@ export const GameProvider = ({ children }) => {
   const [player, setPlayer] = useState(null);
   const [computer, setComputer] = useState(null);
   const [game, setGame] = useState([]);
-  const [score, setScore] = useState({
-    player: 0,
-    computer: 0,
-  });
+  const [score, setScore] = useState(0);
 
   const handleClick = (e) => {
     setPlayer(e);
@@ -41,24 +38,9 @@ export const GameProvider = ({ children }) => {
   useEffect(() => {
     if (player && computer) {
       const result = checkMatch(player, computer);
-      setGame((prev) => [
-        ...prev,
-        {
-          round: prev.length + 1,
-          result: result,
-        },
-      ]);
-      if (result === 'player') {
-        setScore((prev) => ({
-          ...prev,
-          player: prev.player + 1,
-        }));
-      } else if (result === 'computer') {
-        setScore((prev) => ({
-          ...prev,
-          computer: prev.computer + 1,
-        }));
-      }
+      if (result === 'computer') setScore((prev) => prev - 1);
+      if (result === 'player') setScore((prev) => prev + 1);
+      setGame(result);
     }
   }, [player, computer]);
 
